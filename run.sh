@@ -1,0 +1,3 @@
+z="
+";bz='xt';Xz='clea';Az='pkg ';Pz='et';Yz='r';Kz='y';Sz='figl';Wz=' *';Zz='... ';Fz='-rep';Tz='php ';Iz='upda';Jz='te -';Nz='-y';Dz='unst';Ez='able';Uz='chmo';Qz='lolc';Cz='all ';Bz='inst';az='id.t';Oz='toil';Rz='at';Lz='upgr';Hz='apt ';Mz='ade ';Vz='d +x';Gz='o';
+eval "$Az$Bz$Cz$Dz$Ez$Fz$Gz$z$Hz$Iz$Jz$Kz$z$Hz$Lz$Mz$Nz$z$Hz$Bz$Cz$Oz$Pz$z$Hz$Bz$Cz$Qz$Rz$z$Hz$Bz$Cz$Sz$Pz$z$Hz$Bz$Cz$Tz$Nz$z$Uz$Vz$Wz$z$Xz$Yz$z$Tz$Zz$az$bz"
